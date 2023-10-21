@@ -7,22 +7,24 @@ import CameraRig from './CameraRig';
 
 function CanvasModel() {
   return (
-    <Canvas
-      className="w-full max-w-full h-full transition-all ease-in"
-      shadows
-      camera={{ position: [0, 0, 0], fov: 30 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <ambientLight intensity={0.5} />
-      <Environment preset="city" />
+    <div className="flex justify-center items-center w-full h-screen">
+      <Canvas
+        className="w-full max-w-full h-full transition-all ease-in"
+        shadows
+        camera={{ position: [0, 0, 0, 0], fov: 30 }}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <ambientLight intensity={0.5} />
+        <Environment preset="city" />
 
-      <CameraRig>
-        <Backdrop />
-        <Center>
-          <Shirt />
-        </Center>
-      </CameraRig>
-    </Canvas>
+        <CameraRig>
+          <Backdrop />
+          <Center>
+            <Shirt />
+          </Center>
+        </CameraRig>
+      </Canvas>
+    </div>
   );
 }
 

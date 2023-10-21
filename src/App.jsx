@@ -3,7 +3,7 @@ import Customizer from './pages/Customizer';
 
 function App() {
   return (
-    <main className="app transition-all ease-in">
+    <main className="app transition-all ease-in bg-[#393E46]">
       <Canvas />
       <Customizer />
     </main>
